@@ -1,0 +1,33 @@
+:root {
+  --main: #ec8b5e;
+  --second: #141a46;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(
+    120deg,
+    var(--main) 0%,
+    var(--main) 50%,
+    var(--second) 50%,
+    var(--second) 100%
+  );
+  line-height: 1.4;
+  font-family: "Lexend Deca", sans-serif;
+  color: #333;
+}
+
+p {
+  font-size: 0.8rem;
+}
+
+.hidden {
+  display: none
+}
+
+button{
+  outline: 0;
+}

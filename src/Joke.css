@@ -1,0 +1,72 @@
+.Joke {
+  display: flex;
+  border-bottom: #eee solid 1px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  padding: 1rem;
+}
+
+.Joke-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  margin-right: 4.1rem;
+}
+
+.Joke-text {
+  width: 70%;
+  font-size: 1.1rem;
+}
+
+.Joke-votes {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: 3px solid salmon;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.3rem;
+  box-shadow: -1px 1px 5px 3px #2f2b2950;
+  transition: ease-out 0.2s;
+}
+
+/* font awesome icons */
+i.fas {
+  font-size: 1.4rem;
+  margin: 3px;
+  cursor: pointer;
+  padding: 0.1rem;
+}
+
+.fa-arrow-down:hover {
+  transform: translateY(1.3px);
+  transition: 0.1s;
+}
+
+.fa-arrow-up:hover {
+  transform: translateY(-1.3px);
+  transition: 0.1s;
+}
+
+.Joke-smiley {
+  margin-left: auto;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: -1px 1px 2px 1px #2f2b2950;
+  font-size: 2rem;
+  transition: ease-out 0.2s;
+}
+
+.Joke-saveBtn {
+  margin-left: 1px;
+  margin-right: 3px;
+  background: var(--second);
+  border: 0;
+  padding: 0.5rem 0.7rem;
+  color: #f4f4f4;
+  border-radius: 20px;
+  cursor: pointer;
+}

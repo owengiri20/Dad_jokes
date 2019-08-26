@@ -1,0 +1,89 @@
+.JokeList {
+  display: flex;
+  height: 80%;
+  width: 80%;
+  transition: 0.3s ease-out;
+}
+
+.JokeList-sidebar {
+  background: var(--main);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 26%;
+  box-shadow: -3px 5px 9px 3px #2f2b2971;
+  z-index: 2;
+}
+
+.JokeList-title {
+  font-size: 3rem;
+  text-align: center;
+  color: #f4f4f4;
+  font-weight: 200;
+  line-height: 1;
+}
+
+.JokeList-title span {
+  font-weight: 800;
+  font-size: 3.6rem;
+}
+
+.JokeList-sidebar img {
+  width: 50%;
+  box-shadow: -2px 5px 9px 3px #2f2b2971;
+  border-radius: 100%;
+  margin: 1rem;
+}
+
+.JokeList-jokes {
+  background: #fff;
+  height: 90%;
+  align-self: center;
+  width: 70%;
+  overflow-y: scroll;
+  box-shadow: 3px 5px 3px 1px #2f2b294e;
+}
+
+.JokeList-spinner {
+  color: #f4f4f4;
+  text-align: center;
+  transition: 0.8s ease-in;
+}
+
+.JokeList-getmore {
+  font-size: 1.2rem;
+  font-weight: 700;
+  width: 60%;
+  border-radius: 2rem;
+  border: 0;
+  /* padding: 2rem; */
+  padding: 1rem;
+  text-align: center;
+  background: var(--main);
+  box-shadow: -2px 5px 9px 3px #2f2b2971;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.1s ease-out;
+}
+
+.JokeList-getmore:hover {
+  box-shadow: -0px 3px 6px 3px #2f2b2971;
+  transform: translateX(-2px);
+  transition: 0.1s ease-out;
+}
+
+.Joke {
+  transition: 1s ease-in;
+}
+
+.sort-btn {
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+button:disabled{
+  background: var(--main);
+  opacity: .5;
+  cursor: not-allowed;
+}
