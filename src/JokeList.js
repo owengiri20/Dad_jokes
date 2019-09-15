@@ -135,17 +135,16 @@ class JokeList extends Component {
               alt=""
             />
             <button
-              className="JokeList-getmore"
+              className="JokeList-getmore "
               onClick={() => this.handleClick()}
               disabled={this.state.isViewingSaved}
             >
               Get More Jokes
             </button>
             <button
-              className="JokeList-getmore sort-btn"
+              className="JokeList-getmore sort-btn hide"
               onClick={() => this.sortJokes(jokes)}
               disabled={this.state.isViewingSaved}
-
             >
               Sort
             </button>
@@ -158,41 +157,46 @@ class JokeList extends Component {
             </button>
           </div>
 
-          <div className={`JokeList-jokes ${this.state.isViewingSaved ? "hidden" : ""}`}>
-
-            {jokes.map(j => {
-              return (
-                <Joke
-                  saveText={j.isSaved === true ? "Saved!" : "Save"}
-                  isSaved={j.isSaved}
-                  votes={j.votes}
-                  text={j.text}
-                  key={j.id}
-                  upvote={() => this.handleVote(j.id, 1)}
-                  downvote={() => this.handleVote(j.id, -1)}
-                  saveJoke={() => this.handleSave(j.id)}
-                />
-              );
-            })}
+          <div className={`JokeList-jokes-wrapper ${this.state.isViewingSaved ? "hidden" : ""}`}>
+            <div className={`JokeList-jokes`}>
+              {jokes.map(j => {
+                return (
+                  <Joke
+                    saveText={j.isSaved === true ? "Saved!" : "Save"}
+                    isSaved={j.isSaved}
+                    votes={j.votes}
+                    text={j.text}
+                    key={j.id}
+                    upvote={() => this.handleVote(j.id, 1)}
+                    downvote={() => this.handleVote(j.id, -1)}
+                    saveJoke={() => this.handleSave(j.id)}
+                  />
+                );
+              })}
+            </div>
           </div>
 
-          <div className={`JokeList-jokes ${!this.state.isViewingSaved ? "hidden" : ""}`}>
 
-            {this.savedJokes.map(j => {
-              return (
-                <Joke
-                  isSaved={j.isSaved}
-                  saveText={""}
-                  votes={j.votes}
-                  text={j.text}
-                  key={j.id}
-                  upvote={() => this.handleVote(j.id, 1)}
-                  downvote={() => this.handleVote(j.id, -1)}
-                  saveJoke={() => this.handleSave(j.id)}
-                />
-              );
-            })}
+          <div className={`JokeList-jokes-wrapper ${!this.state.isViewingSaved ? "hidden" : ""}`}>
+            <div className={`JokeList-jokes`}>
+
+              {this.savedJokes.map(j => {
+                return (
+                  <Joke
+                    isSaved={j.isSaved}
+                    saveText={""}
+                    votes={j.votes}
+                    text={j.text}
+                    key={j.id}
+                    upvote={() => this.handleVote(j.id, 1)}
+                    downvote={() => this.handleVote(j.id, -1)}
+                    saveJoke={() => this.handleSave(j.id)}
+                  />
+                );
+              })}
+            </div>
           </div>
+
         </div>
       );
     }

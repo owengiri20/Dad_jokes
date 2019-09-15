@@ -13,6 +13,7 @@
   align-items: center;
   width: 25%;
   margin-right: 4.1rem;
+  /* display: none; */
 }
 
 .Joke-text {
@@ -58,6 +59,7 @@ i.fas {
   box-shadow: -1px 1px 2px 1px #2f2b2950;
   font-size: 2rem;
   transition: ease-out 0.2s;
+  
 }
 
 .Joke-saveBtn {
@@ -69,4 +71,21 @@ i.fas {
   color: #f4f4f4;
   border-radius: 20px;
   cursor: pointer;
+}
+
+
+@media(max-width: 550px){
+  .hide {
+    display: none !important;
+  }
+  .Joke-smiley {
+    display: none;
+  }
+  i.fas {
+    display: none;
+  }
+  .Joke-votes {
+    display: none !important;
+  }
+  
 }

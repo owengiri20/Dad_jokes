@@ -3,6 +3,9 @@
   height: 80%;
   width: 80%;
   transition: 0.3s ease-out;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-40%);
 }
 
 .JokeList-sidebar {
@@ -86,4 +89,82 @@ button:disabled{
   background: var(--main);
   opacity: .5;
   cursor: not-allowed;
+}
+
+.JokeList-jokes-wrapper{
+  display: flex;
+  height: 100%;
+}
+@media (max-width: 800px){
+  body{
+    overflow: auto;
+  }
+  .JokeList{
+    display: grid;
+    grid-template-columns: 1fr;
+    height: auto;
+    width: 100%;
+    max-height: 1700px;
+    margin: 0;
+    transition: 0.3s ease-out;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 0;
+    transform: translateX(0);
+  }
+  .JokeList-sidebar {
+    background: var(--main);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    padding-bottom: 2rem;
+    width: 90%;
+    box-shadow: -3px 5px 9px 3px #2f2b2971;
+    z-index: 2;
+  }
+  .JokeList-sidebar img {
+    width: 30%;
+    box-shadow: -2px 5px 9px 3px #2f2b2971;
+    border-radius: 100%;
+    margin: 1rem;
+  }
+  .JokeList-jokes-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    height: 700px;
+  }
+  .JokeList-jokes {
+    padding-top: 2rem;
+    background: #fff;
+    align-self: flex-start;
+    margin:0;
+    justify-self: center;
+    width: 90%;
+    overflow-y: scroll;
+    box-shadow: 3px 5px 3px 1px #2f2b294e;
+  }
+  .App{
+    height: auto;
+  }
+}
+
+@media(max-width: 550px){
+  .hide {
+    display: none !important;
+  }
+  .Joke-smiley {
+    display: none;
+  }
+  i.fas {
+    display: none;
+  }
+  .Joke-votes {
+    display: none !important;
+  }
+  
 }
